@@ -1,0 +1,509 @@
+/* General Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* A common, clean modern font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ====================================
+   0. Header (Adapted from previous request)
+   ==================================== */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #fff;
+    border-bottom: 2px solid #eef6ff; /* Light blue border to match the design */
+}
+
+.logo-placeholder {
+    padding-left: 0;
+    font-size: 10px;
+    font-weight: bold;
+    color: #007bff;
+}
+.company-name {
+    color: #0c6a2c; /* Logo Text Color */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    font-size: 1em;
+    font-weight: 500;
+    color: #666;
+    padding: 5px 0;
+}
+
+.main-nav a.active-nav {
+    color: #007bff; /* Blue color for the active link (About Us) */
+    font-weight: 600;
+}
+
+.btn-get-in-touch {
+    display: inline-block;
+    padding: 8px 25px;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    background: linear-gradient(to right, #0099ff, #007bff);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* ====================================
+   1. Explore Categories Section
+   ==================================== */
+
+.explore-categories-section {
+    padding: 0 5% 80px;
+    background-color: #f0f7ff; /* Very light blue background for the top area */
+}
+
+/* Title Area */
+.title-area {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 0 50px;
+}
+
+.title-area h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: #343a40; /* Dark text for title */
+    margin-bottom: 15px;
+}
+
+.title-area p {
+    font-size: 1.15em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ====================================
+   2. Category Cards
+   ==================================== */
+
+.category-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    padding-top: 30px; /* Space between title area and cards */
+}
+
+.category-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    flex: 1 1 300px;
+    max-width: 380px;
+    min-height: 350px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid transparent; /* Base for the colored border */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Specific Card Styling */
+.pharma { border-color: #007bff; }
+.herbal { border-color: #28a745; }
+.nutra { border-color: #ff8c00; }
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.pharma .card-icon-wrapper { background-color: #e6f0ff; color: #007bff; }
+.herbal .card-icon-wrapper { background-color: #ebf9ee; color: #28a745; }
+.nutra .card-icon-wrapper { background-color: #fff4e5; color: #ff8c00; }
+
+.category-card h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-pharma { background-color: #007bff; }
+.btn-herbal { background-color: #28a745; }
+.btn-nutra { background-color: #ff8c00; }
+
+.card-btn:hover {
+    filter: brightness(1.1);
+}
+
+/* ====================================
+   3. Feature Blocks (Bottom Row)
+   ==================================== */
+
+.feature-blocks-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    flex-wrap: wrap;
+    background-color: #fff; /* White background for this section */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+    position: relative;
+    top: -50px; /* Pull the section up to overlap with the light blue background */
+}
+
+.feature-block {
+    display: flex;
+    align-items: flex-start;
+    flex: 1 1 250px;
+    padding: 0 20px;
+}
+
+.feature-icon-wrapper {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    margin-right: 15px;
+    background-color: #f0f7ff; /* Base icon background */
+    color: #007bff; /* Base icon color */
+    border: 1px solid #e0ebf7;
+}
+
+/* Specific Feature Icon Colors */
+.feature-block:nth-child(1) .feature-icon-wrapper { /* Global Reach */
+    background-color: #e6f0ff;
+    color: #007bff;
+}
+.feature-block:nth-child(2) .feature-icon-wrapper { /* WHO-GMP */
+    background-color: #ebf9ee;
+    color: #28a745;
+}
+.feature-block:nth-child(3) .feature-icon-wrapper { /* Science-Backed */
+    background-color: #fff4e5;
+    color: #ff8c00;
+}
+
+.feature-content h3 {
+    font-size: 1em;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 5px;
+}
+
+.feature-content p {
+    font-size: 0.9em;
+    color: #777;
+}
+
+
+/* ====================================
+   4. Media Queries
+   ==================================== */
+
+@media (max-width: 1050px) {
+    .category-cards-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .title-area h1 {
+        font-size: 2.2em;
+    }
+    .title-area p {
+        font-size: 1em;
+    }
+    .category-card {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+    .feature-blocks-container {
+        flex-direction: column;
+        top: 0;
+        padding: 20px;
+        box-shadow: none;
+    }
+    .feature-block {
+        margin-bottom: 20px;
+    }
+}
+/* ====================================
+   1. Large Testimonial Section
+   ==================================== */
+
+.large-testimonial-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f7f9fc; /* Very light background for contrast */
+}
+
+.testimonial-content-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.quote-marks {
+    font-size: 5em;
+    line-height: 0.5;
+    color: #e0e0e0; /* Light gray for the quote marks */
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.quote-text {
+    font-size: 1.6em;
+    font-style: italic;
+    color: #343a40;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.author-info {
+    font-size: 1em;
+    color: #555;
+}
+
+.author-name {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.author-title {
+    color: #777;
+}
+
+/* ====================================
+   2. CTA Banner (Partner With Us)
+   ==================================== */
+
+.cta-banner {
+    background: linear-gradient(135deg, #0f4c81, #2178c7); /* Gradient blue background */
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-content-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-banner h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cta-banner p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 35px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #007bff; /* Primary blue text color */
+    background-color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* ====================================
+   3. Footer Styles (Copied from previous requests)
+   ==================================== */
+
+.main-footer {
+    background-color: #09203a; /* Dark blue/almost black background */
+    color: #ffffff;
+    padding: 50px 20px 0;
+}
+
+.footer-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-col h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.footer-logo {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.brand-col p {
+    font-size: 0.95em;
+    color: #a0acba;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.social-links .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 0.9em;
+    margin-right: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.quick-links-col ul {
+    list-style: none;
+}
+
+.quick-links-col li {
+    margin-bottom: 10px;
+}
+
+.quick-links-col a {
+    color: #a0acba;
+    text-decoration: none;
+    font-size: 0.95em;
+    transition: color 0.3s;
+}
+
+.contact-col p {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: #a0acba;
+}
+
+.contact-col i {
+    margin-right: 10px;
+    font-size: 1.1em;
+    color: #fff;
+    margin-top: 2px;
+}
+
+.contact-col a {
+    color: #a0acba;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    color: #a0acba;
+}
+
+.footer-bottom .legal-links a {
+    color: #a0acba;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+
+/* Media Query for basic responsiveness */
+@media (max-width: 900px) {
+    .footer-content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-col {
+        min-width: 100%;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0 30px;
+    }
+    .footer-bottom p {
+        margin-bottom: 15px;
+    }
+    .footer-bottom .legal-links a {
+        margin: 0 10px;
+    }
+}
